@@ -3,30 +3,31 @@
 function takeANumber(line, newPerson){
 line.push(newPerson);
   return 
-  (welcome,
-  $`{newPerson}. You are number ${line.length} in line.;`)
+  (welcome, $`{newPerson}. You are number ${line.length} in line.;`);
 } 
 
-function nowServing(){
-const nowServing = (x);
- { if (x.length === 0) 
+function nowServing(line){
+
+ { if (line.length === 0) 
   return "There is nobody waiting to be served!"; 
-  return "Currently serving ${x.shift().;"}
+   
+  else
+  return( "Currently serving ${line.shift().;")}
   
-
-}
-    
-function currentLine(line){
-  if (!line.length) 
-    return "The line is currently empty."
-
-
-
-const x = []
-     for (let i = 0, l = line.length; i < l; i++) { 
-      x.push(`${i + 1}. ${line[i]}`)
   
 }
  
- return `The line is currently: ${x.join(', ')}`
- };
+    
+function currentLine(line){
+  if (!line.length) {
+    return "The line is Currently empty."}
+
+const x = []
+     for (let i = 0; i < line.length; i++) { 
+      x.push(`${i + 1}. ${line[i]}`)
+     }   
+  
+ return "The line is currently: ${x.join(', ')}`;"
+
+
+     }
